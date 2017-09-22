@@ -1,6 +1,6 @@
 ![RxGen logo](https://raw.githubusercontent.com/jrgcubano/RxGen/master/art/rxgen-logo-256x256.png)
 
-[![Build status](https://ci.appveyor.com/api/projects/status/m6pywkwtki9wua1y/branch/master?svg=true)](https://ci.appveyor.com/project/jrgcubano/rxgen/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/dvtgq30jgvhshj04/branch/master?svg=true)](https://ci.appveyor.com/project/jrgcubano/rxgen/branch/master)
 [![NuGet](https://img.shields.io/nuget/v/rxgen.svg)](https://www.nuget.org/packages/RxGen/)
 
 <!--[![Travis](https://img.shields.io/travis/jrgcubano/RxGEN.svg?maxAge=3600&label=travis)](https://travis-ci.org/jrgcubano/RxGen)-->

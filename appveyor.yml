@@ -18,6 +18,8 @@ branches:
     - /r/.*/
     - master
     - develop
+    - /feat/.*/
+    - /fix/.*/
 
 # clone_depth: 1
 build_script:

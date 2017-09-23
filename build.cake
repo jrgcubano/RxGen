@@ -16,7 +16,7 @@ var isLocalBuild = BuildSystem.IsLocalBuild;
 var isPullRequest = AppVeyor.Environment.PullRequest.IsPullRequest;
 var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
 
-var isRepository = StringComparer.OrdinalIgnoreCase.Equals("jrodriguez/rxgen", AppVeyor.Environment.Repository.Name);
+var isRepository = StringComparer.OrdinalIgnoreCase.Equals("jrgcubano/rxgen", AppVeyor.Environment.Repository.Name);
 var isReleaseBranch = StringComparer.OrdinalIgnoreCase.Equals("master", AppVeyor.Environment.Repository.Branch);
 var isTagged = AppVeyor.Environment.Repository.Tag.IsTag;
 
@@ -62,7 +62,14 @@ var msBuildSettings = new DotNetCoreMSBuildSettings()
 
 Setup((context) =>
 {
-    Information("Building version {0} of RxGen. (isTagged: {1}) Nuget Version {2}", informationalVersion, isTagged, nugetVersion);
+    Information("Building RxGen");
+    Information("IsTagged: {0}", isTagged);
+    Information("IsPullRequest: {0}", isPullRequest);
+    Information("IsLocalBuild: {0}", isLocalBuild);
+    Information("IsRepository: {0}", isRepository);
+    Information("IsReleaseBranch: {0}", isReleaseBranch);
+    Information("InformationalVersion: {0}", informationalVersion);
+    Information("NugetVersion: {0}", nugetVersion);
 });
 
 Teardown((context) =>

@@ -29,10 +29,6 @@ var configuration =
     EnvironmentVariable("Configuration") != null ? EnvironmentVariable("Configuration") :
     "Release";
 
-// var nugetApiKey =
-//     HasArgument("nugetApiKey") ? Argument<string>("nugetApiKey") : EnvironmentVariable("NUGET_API_KEY");
-// var githubApiKey = EnvironmentVariable("GITHUB_API_KEY");
-
 // var coverallsApiKey = EnvironmentVariable("COVERALLS_API_KEY");
 
 var artifactsDir = "./artifacts";

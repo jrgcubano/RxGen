@@ -266,7 +266,7 @@ Task("PublishPackages")
         foreach(var package in packageWhitelist)
         {
             // only push the package which was created during this build run.
-            var packagePath = nugetDir + File(string.Format("{0}.{1}.nupkg", package, nugetVersion));
+            var packagePath = nugetDir + "/" + File(string.Format("{0}.{1}.nupkg", package, nugetVersion));
 
             NuGetPush(packagePath, new NuGetPushSettings {
                 Source = source,
@@ -301,7 +301,7 @@ Task("PublishRelease")
         foreach(var package in packageWhitelist)
         {
             // only push the package which was created during this build run.
-            var packagePath = nugetDir + File(string.Format("{0}.{1}.nupkg", package, nugetVersion));
+            var packagePath = nugetDir + "/" + File(string.Format("{0}.{1}.nupkg", package, nugetVersion));
             GitReleaseManagerAddAssets(username, token, githubOwner, githubRepository, majorMinorPatch, packagePath);
         }
 
